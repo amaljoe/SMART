@@ -1,9 +1,10 @@
-DATA_NAME_OR_PATH=
-MODEL_NAME_OR_PATH=meta-llama/Llama-2-7b-hf
-OUTPUT_DIR=
-HUB_TOKEN=
+DATA_NAME_OR_PATH=kowndinya23/flan2022-4096-16-tasks-gc-25000-instances-fl
+#MODEL_NAME_OR_PATH=meta-llama/Llama-2-7b-hf
+MODEL_NAME_OR_PATH=openai-community/gpt2
+OUTPUT_DIR=output
+#HUB_TOKEN=
 
-export WANDB_API_KEY=
+#export WANDB_API_KEY=
 wandb login --cloud --host https://api.wandb.ai --relogin $WANDB_API_KEY
 
 accelerate launch --config_file config.yaml instruction_tuner.py \
